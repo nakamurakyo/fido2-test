@@ -1,5 +1,6 @@
-FROM node:17.2.0-bullseye-slim
+FROM node:16.13-bullseye-slim
 
+# パッケージ関連の作業
 RUN apt-get update && apt-get install -y \
     vim \
     && apt-get clean \

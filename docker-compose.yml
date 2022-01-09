@@ -8,7 +8,7 @@ services:
     volumes:
       - ./src/app:/app
     working_dir: /app
-    command: npm run dev
+    command: bash -c "npm run build && npm run start"
     tty: true
     ports:
-      - 3000:3000
+      - 80:8080
