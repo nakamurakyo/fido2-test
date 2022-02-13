@@ -51,6 +51,7 @@ export const registerCredential = async () => {
 
   // optionのデータを取得
   const options = await _fetch("/auth/registerRequest", opts);
+  // console.log (options);
 
   // 文字列としてbase64urlエンコードしてたのでデコードしてバリナリに戻す
   options.user.id = base64url.decode(options.user.id);
@@ -62,10 +63,37 @@ export const registerCredential = async () => {
     }
   }
 
+  // console.log ("========= authenticatorAttachment platform =============");
+  // options.authenticatorSelection.authenticatorAttachment = "platform";
+  // const cred1 = await navigator.credentials.create({ publicKey: options });
+
+  // console.log ("========= authenticatorAttachment cross-platform =============");
+  // options.authenticatorSelection.authenticatorAttachment = "cross-platform";
+  // const cred2 = await navigator.credentials.create({ publicKey: options });
+
+  // console.log ("========= userVerification required =============");
+  // options.authenticatorSelection.userVerification = "discouraged";
+  // console.log (options.authenticatorSelection.userVerification);
+
+  // 認証の選択肢をもたせる
+  // delete options.authenticatorSelection.authenticatorAttachment
+
+  // attestationの指定の変更
+  // options.attestation = 'enterprise'
+
+  console.log("====== [option] =======");
+  console.log(options)
+
   // 新しいクレデンシャルを作る
   const cred = await navigator.credentials.create({
     publicKey: options
   });
+
+  console.log(cred.response.getTransports())
+  // ['internal']
+
+  console.log("====== [cred] =======");
+  console.log(cred)
 
   // クレデンシャルを登録する際に受け取ったオプションオブジェクトと同様、
   // クレデンシャルのバイナリパラメータをエンコードして、
