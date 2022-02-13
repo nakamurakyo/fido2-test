@@ -104,4 +104,4 @@ dist
 .tern-port
 
 ./src/app/node_modules
-./src/app/.data
+/src/app/.data
