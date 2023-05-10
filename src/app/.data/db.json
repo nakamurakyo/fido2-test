@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "username": "hoge",
+      "id": "-88qjnie9RgOPG7pemWUKb_zPy30g9rDJLpos9lSYVM",
+      "credentials": [
+        {
+          "publicKey": "pQECAyYgASFYIPxJXWoc53I3ytE52URXTx5-Hb998TPbNe-DVlMi43EqIlggKWraY7aRcPvgrJZATO8eS6xJjLWsZ-U-61WhMn-293k",
+          "credId": "_z_UkPSN2pEnLhOFtXqMFdSZKq8K72OsisUh8f-y44g",
+          "prevCounter": 1
+        }
+      ]
+    },
+    {
+      "username": "hogehuga",
+      "id": "KvEzNfyeqOVIZcbKkSqmSblzCOA3695hHLweIICnVL4",
+      "credentials": []
+    }
+  ]
+}
